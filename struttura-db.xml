@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.1.7
+- http://www.phpmyadmin.net
+-
+- Host: localhost
+- Generation Time: Feb 10, 2018 alle 03:37
+- Versione del server: 5.6.33-log
+- PHP Version: 5.3.10
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="my_wardrivers" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="raccolta">
+                CREATE TABLE `raccolta` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `nome` varchar(60) NOT NULL,
+                  `disponibilita` int(11) NOT NULL,
+                  `data` datetime NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="utenti">
+                CREATE TABLE `utenti` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `email` varchar(60) NOT NULL,
+                  `password` varchar(60) NOT NULL,
+                  `nazione` text NOT NULL,
+                  `iscrizione` datetime NOT NULL,
+                  `token` varchar(60) NOT NULL,
+                  `attivo` int(11) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'my_wardrivers'
+    -->
+    <database name="my_wardrivers">
+        <!-- Tabella raccolta -->
+        <table name="raccolta">
+            <column name="id">11</column>
+            <column name="nome"></column>
+            <column name="disponibilita">2</column>
+            <column name="data">2018-02-07 00:16:12</column>
+        </table>
+        <table name="raccolta">
+            <column name="id">10</column>
+            <column name="nome"></column>
+            <column name="disponibilita">2</column>
+            <column name="data">2018-02-07 00:11:30</column>
+        </table>
+        <table name="raccolta">
+            <column name="id">9</column>
+            <column name="nome">50cent</column>
+            <column name="disponibilita">2</column>
+            <column name="data">2018-02-06 21:29:09</column>
+        </table>
+        <!-- Tabella utenti -->
+        <table name="utenti">
+            <column name="id">17</column>
+            <column name="email">prova</column>
+            <column name="password"></column>
+            <column name="nazione"></column>
+            <column name="iscrizione">2018-02-06 01:40:58</column>
+            <column name="token">B6EKaqy1M</column>
+            <column name="attivo">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id">18</column>
+            <column name="email">pp</column>
+            <column name="password"></column>
+            <column name="nazione"></column>
+            <column name="iscrizione">2018-02-06 01:43:53</column>
+            <column name="token">1q2NDrIjC</column>
+            <column name="attivo">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id">19</column>
+            <column name="email"></column>
+            <column name="password"></column>
+            <column name="nazione"></column>
+            <column name="iscrizione">2018-02-06 18:03:44</column>
+            <column name="token">Zv5A0DU81</column>
+            <column name="attivo">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id">20</column>
+            <column name="email"></column>
+            <column name="password"></column>
+            <column name="nazione"></column>
+            <column name="iscrizione">2018-02-06 19:47:22</column>
+            <column name="token">PY9JO32</column>
+            <column name="attivo">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id">21</column>
+            <column name="email">mario</column>
+            <column name="password"></column>
+            <column name="nazione"></column>
+            <column name="iscrizione">2018-02-06 21:22:43</column>
+            <column name="token">pdOFkJHEc</column>
+            <column name="attivo">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id">22</column>
+            <column name="email">luca</column>
+            <column name="password"></column>
+            <column name="nazione">italia</column>
+            <column name="iscrizione">2018-02-06 21:22:59</column>
+            <column name="token">wilrSMQTC</column>
+            <column name="attivo">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id">23</column>
+            <column name="email">giulio</column>
+            <column name="password"></column>
+            <column name="nazione">italia</column>
+            <column name="iscrizione">2018-02-07 13:26:19</column>
+            <column name="token">Dhew3G</column>
+            <column name="attivo">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id">24</column>
+            <column name="email">giulio</column>
+            <column name="password"></column>
+            <column name="nazione"></column>
+            <column name="iscrizione">2018-02-07 13:47:16</column>
+            <column name="token">8gli6R1pyk</column>
+            <column name="attivo">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id">25</column>
+            <column name="email">p</column>
+            <column name="password"></column>
+            <column name="nazione"></column>
+            <column name="iscrizione">2018-02-07 13:48:09</column>
+            <column name="token">AV8UxYqbO</column>
+            <column name="attivo">0</column>
+        </table>
+        <table name="utenti">
+            <column name="id">26</column>
+            <column name="email">fabio</column>
+            <column name="password"></column>
+            <column name="nazione">germania</column>
+            <column name="iscrizione">2018-02-07 20:34:15</column>
+            <column name="token">vAnx4mj96</column>
+            <column name="attivo">0</column>
+        </table>
+    </database>
+</pma_xml_export>
