@@ -1,3 +1,4 @@
 # sistema-di-presstiti  
-
-vorrei avere un filtro nei risultati, se un utente fa la ricerca con il nome del artista vorrei che venisse mostrato gli utenti che piace lo stesso artista e in piu la nazione di questi utenti. invece se si fa una ricerca per nazione vorrei che venisse mostrato i gusti degli utenti che appartengono a quella nazione.
+nel mio db ho 2 tabelle, 1-utenti, 2-raccolta, nel primo registro tutti i nuovi utenti, nell'altro registro i gusti musicali dei miei utenti. nella tabella utenti ho il campo nazione, nell'altra ho i campi, artista e disponibilita che incrementa ogni volta che a un utente piace l'artista di un altro utente.
+dunque nella homepage ho un formulario di ricerca con 2 campi, 1-artistta, 2-nazione, detto cio vorrei avere un filtro nei risultati, in tal modo che  se un utente fa la ricerca con il nome di un artista vorrei che gli venisse mostrato tutti gli utenti che piacciono lo stesso artista e la nazionalita di questi utenti.
+invece se qualcuno vuole sapere i gusti degli utenti della sua zona puo fare una ricerca per nazione e ottenere la lista di tutti gli utenti di quella precisa zona. un classico esempio e una bacheca degli annunci, se si cerca qualcosa si riceve la lista dei venditori e la posizione di queesti, invece se si cerca solo per zona si ottiene solo la lista di oggetti venduti in quella zona.
