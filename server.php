@@ -46,7 +46,6 @@ if(!@function_exists("create_token")) {
 }
 
 
-/* controllo se il token gia esiste nel database, se e positivo rigenero il token */
 
 do {
 	$token = @create_token();
@@ -57,9 +56,9 @@ do {
 
 
 /* PARAMETRI EMAIL*/
-$destinatario = $email;
-$ogetto = "CONFERMA LA TUA REGISTRAZIONE";
-$mesaggio = "clicka sul link per confermare la tua registrazione http://wwww.wardrivers.altervista.org/conferma.php?token=$token";
+$recipient = $email;
+$subject = "confirm your registration";
+$bodymail = "click on the link to confirm your registration ";
 
 /* inserisco nel database i dati dell'utente */
 $sql = "INSERT INTO utenti (id, email, password, iscrizione, token, attivo)
@@ -67,9 +66,9 @@ $sql = "INSERT INTO utenti (id, email, password, iscrizione, token, attivo)
     
 mysql_query($sql) or die (mysql_error());
 
-mail($destinatario, $ogetto, $mesaggio);
+mail($recipient, $subject, $bodymail);
 
-echo "clicki sul link che gli abbiamo mandato per email per completare la registrazione";
+echo "click on the link we sent you by email to complete the registration";
 
 
 
