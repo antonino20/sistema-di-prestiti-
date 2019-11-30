@@ -6,32 +6,32 @@
 
         
 	
-    <link href="stilo.css" rel="stylesheet" type="text/css">
+    <link href="conf.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="wifi.ico" />
 </head>
 <body> 
 	<div>
-		<h4>Accedi alla tua area riservata oppure <a href="#registrazione">registrati</a></h4>
+		<h4>access your reserved area or <a href="#registrazione">sign in</a></h4>
 	<form method="post" action="login.php">
     	Email<input type="text" name="email">
 		Password<input type="password" name="password">
-		<input type="submit" value="login">
+		<input type="submit">
 	</form>
 	</div>
     
     <div>
-    <h4>fai una consulta</h4>
-    	<form method="get" action="consultadb.php">
-        	nome<input type="text" name="nome">
-            nazione<input type="text" name="nazione">
-            <input type="submit" name="invio">
+    <h4>search</h4>
+    	<form method="get" action="querydb.php">
+        	name<input type="text" name="name">
+            nation<input type="text" name="nation">
+            <input type="submit">
         </form>
     </div>
     
     
 	<div>
-    <h4>modulo di iscrizione</h4>
-	<form id="registrazione" method="post" action="server.php" enctype="multipart/form-data">
+    <h4>registration form<h4>
+	<form id="rf" method="post" action="server.php" enctype="multipart/form-data">
 		<table>
 			<tr>
 				<td>email</td>
@@ -42,14 +42,14 @@
                 <td><input type="password" name="password"></td>
         	</tr>
             <tr>
-            	<td>nazione</td>
-                <td><input type="text" name="nazione"></td>
+            	<td>nation</td>
+                <td><input type="text" name="nation"></td>
              </tr>
             <tr>
         		<td><input type="file" name="userfile"></td>
         	</tr>
 			<tr>
-				<td><input type="submit" value="invio"></td>
+				<td><input type="submit"></td>
 			</tr>
 		</table>
 	</form>
@@ -69,7 +69,7 @@ fwrite($file, $data."\n");
 fclose($file);
 
 
-$sql = "SELECT * FROM raccolta";
+$sql = "SELECT * FROM collection";
 
 $result = mysql_query($sql) ;
 
@@ -77,14 +77,14 @@ $result = mysql_query($sql) ;
 echo "<h4>database</h4>";
 
 while($reg = mysql_fetch_array($result)) {
-echo "<div id='risultati'>";
-echo "nome :".$reg['nome']."<br>";
-echo "disponibili : ".$reg['disponibilita']."<br>";
-echo "nazione : ".$reg['nazione']."<br>";
+echo "<div id='result'>";
+echo "name :".$reg['name']."<br>";
+echo "disp : ".$reg['disp']."<br>";
+echo "nation : ".$reg['nation']."<br>";
 
-echo "data inserimento :".$reg['data']."<br>";
+echo "date entered :".$reg['data']."<br>";
 
 echo "</div>";
 
 }
-?>
+?>
