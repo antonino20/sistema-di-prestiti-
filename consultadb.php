@@ -1,23 +1,23 @@
 <?php
 
-$nome = $_GET['nome'];
-$nazione = $_GET['nazione'];
+$name = $_GET['name'];
+$nation = $_GET['nation'];
 
 $conex = mysql_connect('localhost', 'wardrivers');
 mysql_select_db('my_wardrivers', $conex);
 
-$sql = "SELECT * FROM raccolta WHERE nome='$nome' OR nazione='$nazione' ";
+$sql = "SELECT * FROM raccolta WHERE name='$name' OR nation='$nation' ";
 $result = mysql_query($sql);
 
-if(mysql_num_rows($result) == 0) {echo "non ce ancora niente";}
+if(mysql_num_rows($result) == 0) {echo "err";}
 elseif(mysql_num_rows($result) >= 1) {
 
 while($reg = mysql_fetch_array($result)) {
-echo "<div id='risultati'>";
-echo "nome :".$reg['nome']."<br>";
-echo "disponibilita :".$reg['disponibilita']."<br>";
-echo "nazione :".$reg['nazione']."<br>";
+echo "<div id='results'>";
+echo "name :".$reg['name']."<br>";
+echo "disp :".$reg['disp']."<br>";
+echo "nation :".$reg['nation']."<br>";
 
 
 }
-?>
+?>
